@@ -1,0 +1,101 @@
+#animation{
+    min-height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#animation .screen div, .content{
+    position: absolute;
+    transition: all ease 1600ms;
+    transform-style: preserve-3d;
+}
+
+#animation .screen {
+    position: relative;
+    min-height: 377px;
+    min-width: 657px;
+    max-width: 700px;
+    height: 38vh;
+    width: 70%;
+    margin-top: 20%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#animation .background{
+    height:100%;
+    width: 100%;
+    background-size: cover;
+    border-radius: 20px;
+    filter: blur(0.9);
+    border: 1px solid rgba(65, 65, 65, 0.082);
+}
+
+#animation .secondbackground{
+    height:100%;
+    width: 100%;
+    border-radius: 20px;
+    background: rgb(0,0,0);
+    background: linear-gradient(110deg, rgb(29, 29, 29) 50%, rgba(0, 0, 0, 0.397) 30%);
+}
+
+#animation .title{
+    color: white;
+    width: 90%;
+    height: 2%;
+    min-height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#animation:hover .title{
+    color: black;
+}
+
+#animation .content{
+    color: white;
+    margin-top: 70px;
+    padding: 0px;
+    width:90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+#animation .content div {
+    width: 40%;
+    font-size: 0.9rem;
+}
+
+#animation .content button{
+    color: white;
+    background: none;
+    border: 2px solid white;
+    padding: 5px 20px 5px 20px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+
+#animation .screen:hover .background{
+    transform: perspective(1200px) rotateX(40deg) rotateY(10deg) rotateZ(-18deg)
+    translateX(35px) translateY(0px) translateZ(80px);
+}
+#animation .screen:hover .secondbackground{
+    transform: perspective(1200px) rotateX(40deg) rotateY(10deg) rotateZ(-18deg)
+    translateX(35px) translateY(0px) translateZ(80px);
+}
+
+#animation .screen:hover .title{
+    transform: perspective(1200px) rotateX(40deg) rotateY(10deg) rotateZ(-16deg)
+    translateX(35px) translateY(0px) translateZ(110px);
+}
+
+#animation .screen:hover .content{
+    transform: perspective(1200px) rotateX(40deg) rotateY(10deg) rotateZ(-16deg)
+    translateX(35px) translateY(0px) translateZ(110px);
+}
