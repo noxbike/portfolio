@@ -6,7 +6,7 @@
 
 #animation .screen div, .content{
     position: absolute;
-    transition: all ease 1600ms;
+    transition: all ease 500ms;
     transform-style: preserve-3d;
 }
 

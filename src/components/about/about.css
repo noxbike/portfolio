@@ -1,0 +1,36 @@
+#about{
+    padding-top: 10%;
+    height: 100vh;
+    font-size: 1.3rem;
+}
+#about .layout-profile div{
+    width:32%;
+    margin: 10% 0;
+    text-align: left;
+}
+
+#about h2{
+    font-size: 2rem;
+    color: rgb(0, 141, 197);
+}
+
+#about h3{
+    color: rgb(0, 141, 197);
+}
+
+#about .layout-profile{
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#about a{
+    text-decoration: none;
+    color: rgb(0, 141, 197);
+    border: 2px solid rgb(0, 141, 197);
+    border-radius: 50px;
+    padding: 5px 20px;
+}
