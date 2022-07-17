@@ -1,0 +1,38 @@
+#service{
+    padding-top: 8%;
+    height:100vh;
+    font-size: 1.3rem;
+}
+
+#service .title{
+    color: rgb(0, 141, 197);
+}
+
+#service .liste-services{
+    margin: 10% auto;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+}
+
+#service .element{
+    box-shadow: 0 0 20px 5px rgba(128, 128, 128, 0.164);
+    padding: 1%;
+    height: 400px;
+    width: 300px;
+    border-radius: 8px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#service .liste-element{
+    height: 220px;
+    list-style: none;
+    text-align: left;
+}
+
+#service .liste-element li{
+    margin: 4% 0;
+}
