@@ -1,12 +1,26 @@
 #about{
     padding-top: 10%;
-    height: 100vh;
-    font-size: 1.3rem;
+    min-height: 100vh;
+    font-size: 1rem;
+}
+
+#about .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
 }
 #about .layout-profile div{
-    width:32%;
-    margin: 10% 0;
+    width:90%;
+    margin: 5% auto;
     text-align: left;
+}
+
+#about .layout-profile .details div{
+    margin: 0 auto;
+    width: 60%;
 }
 
 #about h2{
@@ -18,12 +32,16 @@
     color: rgb(0, 141, 197);
 }
 
+#about .picture img{
+    width: 100%;
+}
+
 #about .layout-profile{
-    width: 70%;
+    width: 300px;
     margin-right: auto;
     margin-left: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -33,4 +51,36 @@
     border: 2px solid rgb(0, 141, 197);
     border-radius: 50px;
     padding: 5px 20px;
+}
+
+@media screen and (min-width: 700px)  {
+    #about .layout-profile{
+        flex-direction: row;
+        width: 100%;
+    }
+    #about .layout-profile div{
+        width:32%;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 731px){
+    #about .layout-profile .details div{
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 900px)  {
+    
+    #about .container{
+        max-width: 850px;
+    }
+}
+
+@media screen and (min-width: 1040px)  {
+    #about{
+        font-size: 1.3rem;
+    }
+    #about .container{
+        max-width: 1024px;
+    }
 }

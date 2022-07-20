@@ -1,0 +1,90 @@
+#contact{
+    padding: 1% 2%;
+    border-top: 4px solid rgb(0, 132, 255);
+    background-color: rgb(39, 39, 39);
+    font-size: 1.1rem;
+    color:white;
+}
+
+.css-1ylj73i-MuiInputBase-root-MuiInput-root {
+    margin-top: 0px; 
+}
+
+#contact .container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#contact .Form{
+    text-align: left;
+}
+
+#contact .Info, #contact .Form{
+    width: 100%;
+}
+
+#contact .Info .social-media{
+    max-width: 300px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form, form div{
+    padding: 2%
+}
+
+.simple-textField{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#standard-multiline-static{
+    min-width: 300px;
+}
+
+.submitbutton{
+    text-align: right;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer{
+    width: 100%;
+}
+@media screen and (min-width: 0px) and (max-width:614px){
+    #contact{
+        margin-bottom: 53px;
+    }
+}
+@media screen and (min-width: 700px)  {
+    #contact .container{
+        width: 600px;
+    }
+}
+@media screen and (min-width: 1048px)  {
+    #contact .container{
+        width: 1024px;
+        flex-direction: row;
+    }
+
+    #contact .Info, #contact .Form{
+        width: 50%;
+    }
+}
+

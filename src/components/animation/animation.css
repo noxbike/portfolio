@@ -1,6 +1,10 @@
 #animation{
-    min-height: 100%;
-    margin: 0;
+    min-height: 184px;
+    min-width: 378px;
+    font-size: 0.7em;
+    height: 17rem;
+    width: 30rem;
+    margin: 3% 0 0 30%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -12,12 +16,7 @@
 
 #animation .screen {
     position: relative;
-    min-height: 377px;
-    min-width: 657px;
-    max-width: 700px;
-    height: 38vh;
-    width: 70%;
-    margin-top: 20%;
+    height: 100%;
     margin-right: auto;
     margin-left: auto;
     display: flex;
@@ -57,9 +56,10 @@
 }
 
 #animation .content{
+    text-align: left;
     color: white;
-    margin-top: 70px;
-    padding: 0px;
+    margin-top: 9%;
+    padding: 0;
     width:90%;
     display: flex;
     flex-direction: row;
@@ -69,16 +69,14 @@
 
 #animation .content div {
     width: 40%;
-    font-size: 0.9rem;
 }
 
 #animation .content button{
     color: white;
     background: none;
     border: 2px solid white;
-    padding: 5px 20px 5px 20px;
+    padding: 2% 8%;
     border-radius: 8px;
-    font-size: 1.2rem;
 }
 
 #animation .screen:hover .background{
@@ -98,4 +96,21 @@
 #animation .screen:hover .content{
     transform: perspective(1200px) rotateX(40deg) rotateY(10deg) rotateZ(-16deg)
     translateX(35px) translateY(0px) translateZ(110px);
+}
+
+@media screen and (min-width: 500px) {
+    #animation{
+        margin: 3% auto;
+    }
+}
+
+
+
+@media screen and (min-width: 700px) {
+    #animation{
+        margin-top: 5%;
+        font-size: 0.9em;
+        height: 22rem;
+        width: 38rem;
+    }
 }

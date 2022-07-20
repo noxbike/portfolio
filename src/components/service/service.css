@@ -1,7 +1,7 @@
 #service{
     padding-top: 8%;
-    height:100vh;
-    font-size: 1.3rem;
+    min-height:80vh;
+    font-size: 1rem;
 }
 
 #service .title{
@@ -9,19 +9,20 @@
 }
 
 #service .liste-services{
-    margin: 10% auto;
+    margin: 5% auto;
     display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 70%;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
 }
 
 #service .element{
     box-shadow: 0 0 20px 5px rgba(128, 128, 128, 0.164);
     padding: 1%;
-    height: 400px;
-    width: 300px;
-    border-radius: 8px;
+    height: 350px;
+    width: 250px;
+    border-radius: 0.5rem;
+    margin: 2% auto;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
@@ -35,4 +36,39 @@
 
 #service .liste-element li{
     margin: 4% 0;
+}
+
+@media screen and (min-width: 700px)  {
+    #service .liste-services{
+        max-width: 670px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #service .element{
+            height: 300px;
+            width: 200px;
+    }
+}
+
+@media screen and (min-width: 990px)  {
+    #service{
+        font-size: 1.3rem;
+    }
+    #service .liste-services{
+        max-width: 900px;
+    }
+    #service .element{
+        height: 350px;
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 1199px)  {
+    #service .element{
+        height: 400px;
+        width: 300px;
+    }
+    #service .liste-services{
+        max-width: 1024px;
+    }
 }

@@ -1,22 +1,27 @@
 [
     {
         "name": "Home",
-        "link": "#home"
+        "spy": true,
+        "link": "home"
     },
     {
         "name": "About",
-        "link": "#about"
+        "spy": true,
+        "link": "about"
     },
     {
         "name": "Portfolio",
-        "link": "#portfolio"
+        "spy": true,
+        "link": "portfolio"
     },
     {
         "name": "Service",
-        "link": "#service"
+        "spy": true,
+        "link": "service"
     },
     {
         "name": "Contact",
-        "link": "#contact"
+        "spy": false,
+        "link": "contact"
     }
 ]

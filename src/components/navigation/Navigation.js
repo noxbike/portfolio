@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Link } from "react-scroll";
 import listNavigation from './listNavigation.json'
 import './navigation.css'
 
 function Navigation() {
-    const [navActive, setNavActive] = useState('Home')
 
   return (
     <div className='navigation'>
@@ -13,8 +13,8 @@ function Navigation() {
             </div>
             <div className='section-nav'>
                 <ul className='menu'>
-                    {listNavigation.map( nav => 
-                        <li><a onClick={() => setNavActive(nav.name)} className={nav.name + (navActive === nav.name ? " active" : "")} href={nav.link}>{nav.name}</a></li>
+                    {listNavigation.map( (nav,index) => 
+                        <li key={index}><Link activeClass="active" smooth spy={nav.spy} to={nav.link} className={nav.name}>{nav.name}</Link></li>
                     )}
                 </ul>
             </div>
