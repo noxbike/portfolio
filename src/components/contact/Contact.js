@@ -1,6 +1,7 @@
 import React from 'react'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import CircularProgress from '@mui/material/CircularProgress';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import { useForm } from 'react-hook-form'
@@ -73,8 +74,9 @@ function Contact() {
                             />
                         </Box>
                         <div className="submitbutton">
-                            <Button type="submit" variant="outlined" disabled={!isDirty}>
+                            <Button type="submit" variant="outlined" sx={ { borderRadius: 28 } } disabled={!isDirty}>
                                 Submit
+                                <CircularProgress size={14}/>
                             </Button>
                         </div>
                     </form>

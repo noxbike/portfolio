@@ -6,6 +6,7 @@ function Service() {
     <div id="service">
         <div className="title">
             <h2>Services</h2>
+            <p>What i provide</p>
         </div>
         <div className="liste-services">
             <div className="element">
