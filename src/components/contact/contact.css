@@ -6,15 +6,13 @@
     color:white;
 }
 
-.css-1ylj73i-MuiInputBase-root-MuiInput-root {
-    margin-top: 0px; 
-}
-
 #contact .container{
     width: 100%;
+    margin:0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
 }
 

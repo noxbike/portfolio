@@ -11,7 +11,8 @@ function About() {
             <div className="layout-profile">
                 <div className='aboutMe'>
                     <h3>About me</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, rerum esse! Amet tempora alias, laudantium recusandae assumenda accusamus repellendus nihil.</p>
+                    <p>Hi! I am Fullstack Developer from Reunion.
+                    I am insanely passionate about designing beautiful, intuitive and functional websites that live on the internet.</p>
                 </div>
                 <div className='picture'>
                     <img src="./assets/images/moi.png" alt="moi" />
