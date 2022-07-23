@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import CircularProgress from '@mui/material/CircularProgress';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import InputAdornment from '@mui/material/InputAdornment';
 import Box from '@mui/material/Box';
 import { useForm } from 'react-hook-form'
 import axios from 'axios';
@@ -15,28 +16,26 @@ const darkTheme = createTheme({
 });
 
 function Contact() {
-  const { register, handleSubmit, resetField,
-          formState: { errors, isValid, isDirty }} = useForm({
-    defaultValues:{
-        name: "",
-        email: "",
-        message: ""
-    }
-  })
+    const [loading, setLoading] = useState(false)
+    const { register, handleSubmit, reset,
+        formState: { errors, isValid, isDirty }} = useForm({
+            mode: 'onBlur',
+            defaultValues:{
+                name: "",
+                email: "",
+                message: ""
+            }
+        })
 
   const onSubmit = (data) => {
+    setLoading(!loading)
     let email = { email: data };
-    if(isValid){
-        axios.post('http://localhost:3001/api/contact',email)
-        .then(res => reset())
-    }
-   
-  }
 
-  const reset = () =>{
-    resetField("name")
-    resetField("email")
-    resetField("message")
+    axios.post('http://localhost:3001/api/contact',email)
+    .then(res => { 
+        reset();
+        setLoading(false)
+    })
   }
 
   return (
@@ -58,11 +57,13 @@ function Contact() {
                             <TextField id="standard-basic" {...register("name",{required: true})} label="Name" variant="standard" />
                             <TextField 
                                 error={errors.email?.message}
-                                helperText={errors.email?.message}
                                 id="standard-basic" 
                                 {...register("email",{required: true, pattern: {value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i, message: "email invalid !"} })} 
                                 label="Email" 
-                                variant="standard" 
+                                variant="standard"
+                                InputProps={{
+                                    endAdornment: <InputAdornment position="end">{errors.email?.message && 'invalid'}</InputAdornment>,
+                                    }}
                             />
                             <TextField
                                 {...register("message",{required: true})}
@@ -74,9 +75,8 @@ function Contact() {
                             />
                         </Box>
                         <div className="submitbutton">
-                            <Button type="submit" variant="outlined" sx={ { borderRadius: 28 } } disabled={!isDirty}>
-                                Submit
-                                <CircularProgress size={14}/>
+                            <Button type="submit" variant="outlined" sx={ { borderRadius: 28 } } disabled={(!isDirty || !isValid) || loading}>
+                                Submit{loading && <CircularProgress style={{marginLeft: '10px'}} size={14}/>}
                             </Button>
                         </div>
                     </form>
