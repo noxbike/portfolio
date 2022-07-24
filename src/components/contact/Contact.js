@@ -30,8 +30,16 @@ function Contact() {
   const onSubmit = (data) => {
     setLoading(!loading)
     let email = { email: data };
-
-    axios.post('http://localhost:3001/api/contact',email)
+    axios.post('https://backend.mitech.re/api/contact',email,{
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+            'Access-Control-Allow-Origin': 'https://mitech.re',
+            'Content-Type': 'application/json',
+    },
+    withCredentials: true,
+    credentials: 'same-origin',
+    })
     .then(res => { 
         reset();
         setLoading(false)
@@ -91,7 +99,7 @@ function Contact() {
                     <li><a href="https://www.instagram.com/noxbike/" target={"blank"}><img src="./assets/images/instagram.png" alt="instagram-logo" height="40rem"/></a></li>
                     <li><a href='https://www.linkedin.com/in/mickael-morel-134879150/' target={"blank"}><img src="./assets/images/linkedin.png" alt="linkedin-logo" height="40rem"/></a></li>
                     <li><a href="https://twitter.com/noxbike" target="blank"><img src="./assets/images/bird.png" alt="twitter-logo" height="40rem"/></a></li>
-                    <li><a href="https://github.com/noxbike" target={"blank"}><img src="./assets/images/Github2.png" alt="Github-logo" height="40rem"/></a></li>
+                    <li><a href="https://github.com/noxbike" target={"blank"}><img src="./assets/images/github2.png" alt="Github-logo" height="40rem"/></a></li>
                 </ul>
             </div>
             <div className='footer'>

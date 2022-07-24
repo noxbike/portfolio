@@ -3,18 +3,18 @@
         "name": "RoomMe",
         "link": "/projet1",
         "linkGit": "http://www.github.com/noxbike/RoomMe",
-        "img": "roome.jpg"
+        "img": "roome.JPG"
     },
     {
         "name": "LandingPage",
         "link": "/projet2",
         "linkGit": "http://www.github.com/noxbike/Landing_page",
-        "img": "Capture.jpg"
+        "img": "capture.JPG"
     },
     {
         "name": "Formulaire",
         "link": "/projet3",
         "linkGit": "http://www.github.com/noxbike/formulaire",
-        "img": "formulaire.jpg"
+        "img": "formulaire.JPG"
     }
 ]

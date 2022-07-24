@@ -17,7 +17,7 @@ function Portfolio() {
                         <div className="projet" style={{backgroundImage: `url("assets/projects/${item.img}")`}}>
                             <div className='subInfo'>
                                 <p>{item.name}</p>
-                                <a href={item.linkGit} target="blank"><img src="./assets/images/Github.png" alt="git-logo" height="30px"/></a>
+                                <a href={item.linkGit} target="blank"><img src="./assets/images/github.png" alt="git-logo" height="30px"/></a>
                             </div>
                         </div>
                     </a>
