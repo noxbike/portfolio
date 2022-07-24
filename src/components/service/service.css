@@ -63,12 +63,18 @@
     }
 }
 
-@media screen and (min-width: 1199px)  {
+@media screen and (min-width: 1030px)  {
+    #service .liste-services{
+        max-width: 1024px;
+    }
+}
+
+@media screen and (min-width: 1200px)  {
     #service .element{
         height: 400px;
         width: 300px;
     }
     #service .liste-services{
-        max-width: 1024px;
+        max-width: 1200px;
     }
 }

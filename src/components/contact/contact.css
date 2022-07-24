@@ -75,14 +75,19 @@ form, form div{
         width: 600px;
     }
 }
-@media screen and (min-width: 1048px)  {
+
+@media screen and (min-width: 1030px)  {
     #contact .container{
         width: 1024px;
         flex-direction: row;
     }
-
     #contact .Info, #contact .Form{
         width: 50%;
+    }
+}
+@media screen and (min-width: 1200px)  {
+    #contact .container{
+        width: 1200px;
     }
 }
 
