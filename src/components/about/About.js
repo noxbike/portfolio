@@ -1,29 +1,25 @@
 import React from 'react'
 import './about.css';
+import { Link } from "react-scroll";
+
 function About() {
   return (
     <div id="about">
         <div className="container">
-            <div className="profile">
-                <h2>Profile</h2>
-                <p>I am a Fullstack Developer Javascript</p>
-            </div>
             <div className="layout-profile">
                 <div className='aboutMe'>
                     <h3>About me</h3>
-                    <p>Hi! I am Fullstack Developer from Reunion.
-                    I am insanely passionate about designing beautiful, intuitive and functional websites that live on the internet.</p>
+                    <p>
+                    En tant qu'autodidacte passionné, j'ai acquis une expertise solide dans le domaine du développement 
+                    web. Ma volonté d'apprendre de manière autonome m'a permis de maîtriser les langages de programmation, 
+                    les frameworks et les technologies web modernes. Avec une expérience concrète et une approche pratique, 
+                    je suis prêt à relever tous les défis pour créer des solutions web innovantes et performantes. 
+                    </p>
+                    <Link activeClass="active" smooth spy={true} to="contact" className="contactme">Contact</Link>
+                    <a href="/assets/documents/CV-Morel-Mickael.pdf" target="blank">Download CV</a>
                 </div>
                 <div className='picture'>
                     <img src="./assets/images/moi.png" alt="moi" />
-                </div>
-                <div className="details">
-                    <div>
-                        <h3>Details</h3>
-                        <p><strong>Name:</strong><br/>Mickael Morel</p>
-                        <p><strong>Age:</strong><br/>27 years old</p>
-                        <a href="/assets/documents/CV-Morel-Mickael.pdf" target="blank">Download CV</a>
-                    </div>
                 </div>
             </div>
         </div>

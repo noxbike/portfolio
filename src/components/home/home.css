@@ -3,16 +3,15 @@
     background-position: right 0px bottom 0px;
     background-size: 100% auto;
     max-width: 100%;
-    min-height: 100vh;
     width:100%;
 }
 
 #home .container{
-    padding-top: 14%;
-    width: 90%;
+    padding-top:50px;
+    width: 100%;
     margin:0 auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: space-around;
     align-items: center;
 }
@@ -20,22 +19,23 @@
 #home .section-presentation{
     padding: 0 5%;
 }
+#home .sub-title{
+    font-size: 25px;
+    font-weight: 400;
+}
 #home .title h1{
-    font-size: 2em;
+    font-size: 3rem;
 }
 
 #home .today-title{
-    color: rgb(0, 141, 197);
+    color: #467c9b;
 }
 
 #home .title, #home .subtitle{
     text-align: left;
-    font-size: 1.2em;
+    font-size: 1rem;
 }
 
-#home .subtitle p{
-    color: gray;
-}
 
 #home .subtitle div{
     margin: 40px 0;
@@ -54,15 +54,18 @@
 
 #home .buttonContact{
     text-decoration:none;
-    font-weight: bold;
-    color: rgb(0, 141, 197);
-    border: 2px solid rgb(0, 141, 197);
+    color: black;
+    background-color: #467c9b;
+    border: 2px solid #467c9b;
+    box-shadow: 0px 0px 12px #467c9b93;
     padding: 5px 30px;
-    border-radius: 50px;
+    border-radius: 6px;
 }
 
 #home .section-3D{
     box-sizing: inherit;
+    margin-right: 50px;
+    border-radius: 6px;
 }
 @media screen and (min-width:700px) {
     #home .container{
@@ -76,14 +79,10 @@
     #home .section-3D{
         display: block;
         width: 100%;
-        margin-top: 5%;    }
+        margin-top: 5%;
+    }
  }
 
- @media screen and (min-width:600px) {
-    #home .title h1{
-        font-size: 3em;
-    }
-}
 
  @media screen and (min-width:1120px) {
     #home .container{

@@ -1,19 +1,19 @@
 import React from 'react'
-import Animation from '../animation/Animation'
 import './home.css'
+import Lottie from 'lottie-react'
+import animationData from "./website.json"
 
 export default function Home() {
   return (
-    <div id="home" style={{backgroundImage: `url("./assets/images/wave.png")`}}>
+    <div id="home">
       <div className='container'>
         <div className="section-presentation">
           <div className="title">
-            <h1>Create your website</h1>
-            <h1 className='today-title'>TODAY</h1>
+            <h1><span className='sub-title'>Bonjour, je suis </span><br/>DEVELOPPEUR <span className='today-title'>FULLSTACK</span></h1>
           </div>
           <div className="subtitle">
             <div>
-              <p>Fullstack developer</p>
+              <p>Découvrez mes compétences variées en développement front-end et back-end, ainsi que mes projets passionnants</p>
             </div>
             <div>
               <a className="buttonContact" href='#contact'>Contact</a>
@@ -28,7 +28,7 @@ export default function Home() {
           </div>
         </div>
         <div className="section-3D">
-          <Animation/>
+          <Lottie animationData={animationData} />
         </div>
       </div>
     </div>

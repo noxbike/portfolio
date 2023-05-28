@@ -5,6 +5,11 @@
         "link": "home"
     },
     {
+        "name": "Service",
+        "spy": true,
+        "link": "service"
+    },
+    {
         "name": "About",
         "spy": true,
         "link": "about"
@@ -12,16 +17,11 @@
     {
         "name": "Portfolio",
         "spy": true,
-        "link": "portfolio"
-    },
-    {
-        "name": "Service",
-        "spy": true,
-        "link": "service"
+        "link": "Portfolio"
     },
     {
         "name": "Contact",
-        "spy": false,
+        "spy": true,
         "link": "contact"
     }
 ]

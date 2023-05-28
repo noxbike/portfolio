@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -17,9 +17,10 @@ const darkTheme = createTheme({
 
 function Contact() {
     const [loading, setLoading] = useState(false)
-    const { register, handleSubmit, reset,
+    const [buttonEn, setButtonEn] = useState(true);
+    const { register, getValues, handleSubmit, reset,
         formState: { errors, isValid, isDirty }} = useForm({
-            mode: 'onBlur',
+            mode: 'onChange',
             defaultValues:{
                 name: "",
                 email: "",
@@ -30,11 +31,11 @@ function Contact() {
   const onSubmit = (data) => {
     setLoading(!loading)
     let email = { email: data };
-    axios.post('https://backend.mitech.re/api/contact',email,{
+    axios.post('http://localhost:3001/api/contact',email,{ //https://backend.mitech.re/api/contact
         method: 'POST',
         mode: 'no-cors',
         headers: {
-            'Access-Control-Allow-Origin': 'https://mitech.re',
+            'Access-Control-Allow-Origin': 'http://localhost:3000',//https://mitech.re
             'Content-Type': 'application/json',
     },
     withCredentials: true,
@@ -46,12 +47,23 @@ function Contact() {
     })
   }
 
+  useEffect(() => {
+    const name = getValues("name");
+    const email = getValues("email");
+    const message = getValues("message");
+    if(name.length > 0 && email.length > 0 && message.length > 0 && isValid)
+    {
+        setButtonEn(false);
+    }
+  },[getValues()])
+
+
   return (
     <div id="contact">
         <div className="container">
             <div className='Form'>
                 <ThemeProvider theme={darkTheme}>
-                    <h3>Get in touch</h3>
+                    <h3>Contactez-moi</h3>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <Box
                             className="simple-textField"
@@ -62,7 +74,7 @@ function Contact() {
                             noValidate
                             autoComplete="off"
                         >
-                            <TextField id="standard-basic" {...register("name",{required: true})} label="Name" variant="standard" />
+                            <TextField id="standard-basic" {...register("name",{required: true})} label="Nom" variant="standard" />
                             <TextField 
                                 error={errors.email?.message}
                                 id="standard-basic" 
@@ -83,7 +95,7 @@ function Contact() {
                             />
                         </Box>
                         <div className="submitbutton">
-                            <Button type="submit" variant="outlined" sx={ { borderRadius: 28 } } disabled={(!isDirty || !isValid) || loading}>
+                            <Button type="submit" variant="outlined" sx={ { borderRadius: 28 } } disabled={buttonEn}>
                                 Submit{loading && <CircularProgress style={{marginLeft: '10px'}} size={14}/>}
                             </Button>
                         </div>
@@ -103,7 +115,7 @@ function Contact() {
                 </ul>
             </div>
             <div className='footer'>
-                <p>2022 © mitech.re</p>
+                <p>2023 © noxdev.re</p>
             </div>
         </div>
     </div>

@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "name": "RoomMe",
+        "intro": "Bibliothèque d'information sur les animées, le site est créé avec react js les données sont récupérés a partir d'une API public en ligne.",
+        "link": "/projet1",
+        "linkGit": "http://www.github.com/noxbike/RoomMe",
+        "img": "roome.JPG",
+        "languages":["react"]
+    },
+    {
+        "id": 2,
+        "name": "LandingPage",
+        "intro": "Landing page créé en html et css ave un design moderne",
+        "link": "/projet2",
+        "linkGit": "http://www.github.com/noxbike/Landing_page",
+        "img": "capture.JPG",
+        "languages": ["html", "css"]
+    },
+    {
+        "id": 3,
+        "name": "Formulaire",
+        "intro":"formulaire de connection en html et css",
+        "link": "/projet3",
+        "linkGit": "http://www.github.com/noxbike/formulaire",
+        "img": "formulaire.JPG",
+        "languages": ["html", "css"]
+    }
+]

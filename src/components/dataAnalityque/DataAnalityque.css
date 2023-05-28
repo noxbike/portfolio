@@ -1,0 +1,55 @@
+#DataAnalityque{
+    background: rgb(6,7,14);
+    background: linear-gradient(307deg, rgba(6,7,14,1) 50%, rgba(70,124,155,1) 120%);
+    width: 100%;
+    margin-top: 50px;
+}
+
+#DataAnalityque .container {
+    max-width: 1200px;
+    padding: 5% 0 5% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#DataAnalityque .first {
+    max-width: 350px;
+    text-align: left;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#DataAnalityque .second {
+    text-align: center;
+}
+
+#DataAnalityque .second .data {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #467c9bb3!important;
+    margin-bottom: 0;
+}
+
+#DataAnalityque .second p{
+    margin-top: 0;
+}
+
+@media screen and (min-width:700px) {
+    #DataAnalityque .container {
+        flex-direction: row;
+    }
+    #DataAnalityque .first {
+        margin: 0;
+    }
+
+    #DataAnalityque .second {
+        text-align: left;
+    }
+}
+
