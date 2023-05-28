@@ -31,11 +31,11 @@ function Contact() {
   const onSubmit = (data) => {
     setLoading(!loading)
     let email = { email: data };
-    axios.post('http://localhost:3001/api/contact',email,{ //https://backend.mitech.re/api/contact
+    axios.post('https://backend.mickadev.com/api/contact',email,{
         method: 'POST',
         mode: 'no-cors',
         headers: {
-            'Access-Control-Allow-Origin': 'http://localhost:3000',//https://mitech.re
+            'Access-Control-Allow-Origin': 'https://www.mickadev.com',
             'Content-Type': 'application/json',
     },
     withCredentials: true,
@@ -115,7 +115,7 @@ function Contact() {
                 </ul>
             </div>
             <div className='footer'>
-                <p>2023 © noxdev.re</p>
+                <p>2023 © mickadev.com</p>
             </div>
         </div>
     </div>
