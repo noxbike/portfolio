@@ -1,7 +1,8 @@
 name: Deploy to Cpanel
 on:
   push:
-    - master
+    branches:
+      - master
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
