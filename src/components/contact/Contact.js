@@ -19,7 +19,7 @@ function Contact() {
     const [loading, setLoading] = useState(false)
     const [buttonEn, setButtonEn] = useState(true);
     const { register, getValues, handleSubmit, reset,
-        formState: { errors, isValid, isDirty }} = useForm({
+        formState: { errors, isValid }} = useForm({
             mode: 'onChange',
             defaultValues:{
                 name: "",
@@ -55,7 +55,7 @@ function Contact() {
     {
         setButtonEn(false);
     }
-  },[getValues()])
+  },[getValues, isValid])
 
 
   return (
