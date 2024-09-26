@@ -8,7 +8,7 @@ function About() {
         <div className="container">
             <div className="layout-profile">
                 <div className='aboutMe'>
-                    <h3>About me</h3>
+                    <h3>A propos de moi</h3>
                     <p>
                     En tant qu'autodidacte passionné, j'ai acquis une expertise solide dans le domaine du développement 
                     web. Ma volonté d'apprendre de manière autonome m'a permis de maîtriser les langages de programmation, 
