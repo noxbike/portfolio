@@ -1,21 +1,32 @@
 name: Deploy to Cpanel
-on:
-  push:
-    branches:
-      - master
+on: push
+name: 🚀 Deploy website on push
 jobs:
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
-      #deploy to cpanel
-      - name: FTP-Deploy-Action
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+
+    - name: Use Node.js 14
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+      
+    - name: 🔨 Build Project
+      run: |
+        npm install
+        npm run build
+    
+    - name: List output files
+      run: find build/ -print
+      
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      with:
           server: ${{ secrets.PORTFOLIO_FTP_SERVER }}
           username: ${{ secrets.PORTFOLIO_FTP_NAME }}
           password: ${{ secrets.PORTFOLIO_FTP_PASSWORD }}
           port: ${{ secrets.PORTFOLIO_FTP_PORT }}
+          local-dir: build/
