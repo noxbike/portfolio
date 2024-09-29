@@ -7,8 +7,8 @@ export default function Item(props) {
                 <h3>{props.data.name}</h3>
                 <p>{props.data.intro}</p>
                 <ul className='languages'>
-                    {props.data.languages.map(lang =>
-                        <img src={`./assets/images/${lang}.png`} alt={`logo-${props.lang}`} height={25}/>
+                    {props.data.languages.map((lang, index) =>
+                        <img key={index} src={`./assets/images/${lang}.png`} alt={`logo-${props.lang}`} height={25}/>
                     )}
                 </ul>
                 <div className='linkButton'>

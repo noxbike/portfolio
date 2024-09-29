@@ -8,6 +8,8 @@ import Box from '@mui/material/Box';
 import { useForm } from 'react-hook-form'
 import axios from 'axios';
 import './contact.css'
+const apiUrl = process.env.REACT_APP_API_URL;
+const appUrl = process.env.REACT_APP_URL;
 
 const darkTheme = createTheme({
     palette: {
@@ -31,11 +33,11 @@ function Contact() {
   const onSubmit = (data) => {
     setLoading(!loading)
     let email = { email: data };
-    axios.post('https://backend.mickadev.com/api/contact',email,{
+    axios.post(`${apiUrl}/api/contact`,email,{
         method: 'POST',
         mode: 'no-cors',
         headers: {
-            'Access-Control-Allow-Origin': 'https://www.mickadev.com',
+            'Access-Control-Allow-Origin': `${appUrl}`,
             'Content-Type': 'application/json',
     },
     withCredentials: true,
@@ -44,6 +46,7 @@ function Contact() {
     .then(res => { 
         reset();
         setLoading(false)
+        alert('Votre message a bien été envoyée!')
     })
   }
 

@@ -9,11 +9,11 @@ export default function Projet() {
     <div id='Portfolio'>
         <div className="title">
             <h3>Projets</h3>
-            <p><p>Découvrez une collection de mes réalisations les plus passionnantes, mettant en valeur mon expertise technique, ma vision artistique et ma passion pour les défis du développement.</p></p>
+            <p>Découvrez une collection de mes réalisations les plus passionnantes, mettant en valeur mon expertise technique, ma vision artistique et ma passion pour les défis du développement.</p>
         </div>
         <Swiper style={{zIndex: 0}}>
-                {data.map((data) =>
-                <SwiperSlide>
+                {data.map((data,index) =>
+                <SwiperSlide key={index}>
                     <Item data={data}/>
                 </SwiperSlide>)}
             </Swiper>
