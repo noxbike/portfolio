@@ -33,7 +33,7 @@ function Contact() {
   const onSubmit = (data) => {
     setLoading(!loading)
     let email = { email: data };
-    axios.post(`${apiUrl}/api/contact`,email,{
+    axios.post(`https://mickadev.com/api/contact`,email,{
         method: 'POST',
         mode: 'no-cors',
         headers: {
