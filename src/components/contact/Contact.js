@@ -118,7 +118,7 @@ function Contact() {
                 </ul>
             </div>
             <div className='footer'>
-                <p>2023 © mickadev.com</p>
+                <p>2024 © mickadev.com</p>
             </div>
         </div>
     </div>
