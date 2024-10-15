@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import listNavigation from './listNavigation.json'
 import './navigation.css'
 
-function Navigation() {
+function Navigation({setLanguage, language, dbLang}) {
 
   return (
     <div className='navigation'>
@@ -13,10 +13,16 @@ function Navigation() {
             </div>
             <div className='section-nav'>
                 <ul className='menu'>
-                    {listNavigation.map( (nav,index) => 
-                        <li key={index}><Link activeClass="active" smooth spy={nav.spy} to={nav.link} className={nav.name}>{nav.name}</Link></li>
+                    {listNavigation.map( (item,index) => 
+                        <li key={index}><Link activeClass="active" smooth spy={item.spy} to={item.link} className={item.name}>{dbLang[item.name]}</Link></li>
                     )}
                 </ul>
+            </div>
+            <div className='languages'>
+                    <select onChange={(e) => setLanguage(e.target.value)} defaultValue={language}>
+                        <option value="EN">EN</option>
+                        <option value="FR">FR</option>
+                    </select>
             </div>
         </div>
     </div>

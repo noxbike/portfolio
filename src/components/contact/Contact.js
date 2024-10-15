@@ -17,7 +17,7 @@ const darkTheme = createTheme({
     },
 });
 
-function Contact() {
+function Contact({dbLang}) {
     const [loading, setLoading] = useState(false)
     const [buttonEn, setButtonEn] = useState(true);
     const { register, getValues, handleSubmit, reset,
@@ -66,7 +66,7 @@ function Contact() {
         <div className="container">
             <div className='Form'>
                 <ThemeProvider theme={darkTheme}>
-                    <h3>Contactez-moi</h3>
+                    <h3>{dbLang.title}</h3>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <Box
                             className="simple-textField"
@@ -77,7 +77,7 @@ function Contact() {
                             noValidate
                             autoComplete="off"
                         >
-                            <TextField id="standard-basic" {...register("name",{required: true})} label="Nom" variant="standard" />
+                            <TextField id="standard-basic" {...register('name',{required: true})} label={dbLang.name} variant="standard" />
                             <TextField 
                                 error={errors.email?.message}
                                 id="standard-basic" 
@@ -99,7 +99,7 @@ function Contact() {
                         </Box>
                         <div className="submitbutton">
                             <Button type="submit" variant="outlined" sx={ { borderRadius: 28 } } disabled={buttonEn}>
-                                Submit{loading && <CircularProgress style={{marginLeft: '10px'}} size={14}/>}
+                                {dbLang.submit}{loading && <CircularProgress style={{marginLeft: '10px'}} size={14}/>}
                             </Button>
                         </div>
                     </form>

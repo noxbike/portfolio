@@ -3,17 +3,17 @@ import './home.css'
 import Lottie from 'lottie-react'
 import animationData from "./website.json"
 
-export default function Home() {
+export default function Home({dbLang}) {
   return (
     <div id="home">
       <div className='container'>
         <div className="section-presentation">
           <div className="title">
-            <h1><span className='sub-title'>Bonjour, je suis </span><br/>DEVELOPPEUR <span className='today-title'>FULLSTACK</span></h1>
+            <h1><span className='sub-title'>{dbLang['hello']} </span><br/>{dbLang['developer']} <span className='today-title'>FULL-STACK</span></h1>
           </div>
           <div className="subtitle">
             <div>
-              <p>Découvrez mes compétences variées en développement front-end et back-end, ainsi que mes projets passionnants</p>
+              <p>{dbLang['intro']}</p>
             </div>
             <div>
               <a className="buttonContact" href='#contact'>Contact</a>

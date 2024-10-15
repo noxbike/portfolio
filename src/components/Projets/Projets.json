@@ -1,8 +1,11 @@
 [
     {
         "id": 1,
-        "name": "RoomMe",
-        "intro": "Bibliothèque d'information sur les animées, le site est créé avec react js les données sont récupérés a partir d'une API public en ligne.",
+        "name": "Popcorn Streaming",
+        "intro": {
+            "FR":"Bibliothèque d'information sur les animées, le site est créé avec react js les données sont récupérés a partir d'une API public en ligne.",
+            "EN":"Library of information about anime, this project is created with React Js. The data is retrieved from a public online API."
+        },
         "link": "/projet1",
         "linkGit": "http://www.github.com/noxbike/RoomMe",
         "img": "roome.JPG",
@@ -11,7 +14,10 @@
     {
         "id": 2,
         "name": "LandingPage",
-        "intro": "Landing page créé en html et css ave un design moderne",
+        "intro": {
+            "FR": "Page d'accueil créé en html et css avec un design moderne",
+            "EN": "Home page created in html and css with a modern design"
+        },
         "link": "/projet2",
         "linkGit": "http://www.github.com/noxbike/Landing_page",
         "img": "capture.JPG",
@@ -19,8 +25,11 @@
     },
     {
         "id": 3,
-        "name": "Formulaire",
-        "intro":"formulaire de connection en html et css",
+        "name": "Login form",
+        "intro":{
+            "FR": "formulaire de connection en html et css", 
+            "EN": "login form in html and css"
+        },
         "link": "/projet3",
         "linkGit": "http://www.github.com/noxbike/formulaire",
         "img": "formulaire.JPG",

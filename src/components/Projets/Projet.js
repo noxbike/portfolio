@@ -4,17 +4,17 @@ import './projet.css'
 import data from './Projets.json'
 import Item from './Item'
 
-export default function Projet() {
+export default function Projet({dbLang, language}) {
   return (
     <div id='Portfolio'>
         <div className="title">
-            <h3>Projets</h3>
-            <p>Découvrez une collection de mes réalisations les plus passionnantes, mettant en valeur mon expertise technique, ma vision artistique et ma passion pour les défis du développement.</p>
+            <h3>{dbLang.title}</h3>
+            <p>{dbLang.intro}</p>
         </div>
         <Swiper style={{zIndex: 0}}>
                 {data.map((data,index) =>
                 <SwiperSlide key={index}>
-                    <Item data={data}/>
+                    <Item data={data} language={language}/>
                 </SwiperSlide>)}
             </Swiper>
     </div>
