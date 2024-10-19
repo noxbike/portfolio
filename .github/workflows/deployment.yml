@@ -14,7 +14,7 @@ jobs:
       with:
         envkey_DEBUG: false
         GENERATE_SOURCEMAP: ${{ secrets.GENERATE_SOURCEMAP }}
-        REACT_APP_URL: ${{secrets.REACT_APP_UR}}
+        REACT_APP_URL: ${{secrets.REACT_APP_URL}}
         REACT_APP_API_URL: ${{secrets.REACT_APP_API_URL}}
         file_name: .env
         fail_on_empty: false
