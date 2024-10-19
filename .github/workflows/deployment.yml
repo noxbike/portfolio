@@ -13,9 +13,9 @@ jobs:
       uses: SpicyPizza/create-envfile@v2.0
       with:
         envkey_DEBUG: false
-        envkey_GENERATE_SOURCEMAP: ${{ secrets.GENERATE_SOURCEMAP }}
-        envkey_REACT_APP_URL: ${{secrets.REACT_APP_UR}}
-        envkey_REACT_APP_API_URL: ${{secrets.REACT_APP_API_URL}}
+        GENERATE_SOURCEMAP: ${{ secrets.GENERATE_SOURCEMAP }}
+        REACT_APP_URL: ${{secrets.REACT_APP_UR}}
+        REACT_APP_API_URL: ${{secrets.REACT_APP_API_URL}}
         file_name: .env
         fail_on_empty: false
         sort_keys: false
