@@ -4,6 +4,22 @@ on:
     branches:
       - master
 jobs:
+  create-envfile:
+ 
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - name: Make envfile
+      uses: SpicyPizza/create-envfile@v2.0
+      with:
+        envkey_DEBUG: false
+        envkey_GENERATE_SOURCEMAP: ${{ secrets.GENERATE_SOURCEMAP }}
+        envkey_REACT_APP_URL: ${{secrets.REACT_APP_UR}}
+        envkey_REACT_APP_API_URL: ${{secrets.REACT_APP_API_URL}}
+        directory: portfolio/
+        file_name: .env
+        fail_on_empty: false
+        sort_keys: false
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
