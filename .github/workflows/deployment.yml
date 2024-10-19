@@ -16,7 +16,6 @@ jobs:
         envkey_GENERATE_SOURCEMAP: ${{ secrets.GENERATE_SOURCEMAP }}
         envkey_REACT_APP_URL: ${{secrets.REACT_APP_UR}}
         envkey_REACT_APP_API_URL: ${{secrets.REACT_APP_API_URL}}
-        directory: portfolio/
         file_name: .env
         fail_on_empty: false
         sort_keys: false
