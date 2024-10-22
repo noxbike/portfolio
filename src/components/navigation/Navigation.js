@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-scroll";
-import listNavigation from './listNavigation.json'
+import listNavigation from './listNavigation'
 import './navigation.css'
 
 function Navigation({setLanguage, language, dbLang}) {
@@ -14,7 +14,12 @@ function Navigation({setLanguage, language, dbLang}) {
             <div className='section-nav'>
                 <ul className='menu'>
                     {listNavigation.map( (item,index) => 
-                        <li key={index}><Link activeClass="active" smooth spy={item.spy} to={item.link} className={item.name}>{dbLang[item.name]}</Link></li>
+                        <li key={index}>
+                            <Link activeClass="active" smooth spy={item.spy} to={item.link} className={item.name}>
+                                <img className="icon" width='30px' src={item.icon} alt={item.name} />
+                                <span className='text'>{dbLang[item.name]}</span>
+                            </Link>
+                        </li>
                     )}
                 </ul>
             </div>

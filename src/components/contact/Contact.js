@@ -108,7 +108,7 @@ function Contact({dbLang}) {
             <div className='Info'>
                 <p>+262 693 92 22 09</p>
                 <p>noxbike@gmail.com</p>
-                <p>37 chemin isnard, Piton Sainte-Rose Réunion</p>
+                <p>Sainte-Rose, Réunion</p>
                 <ul className="social-media">
                     <li><a href="https://www.facebook.com/morel.mickael.169" target={"blank"}><img src="./assets/images/facebook.png" alt="facebook-logo" height="40rem"/></a></li>
                     <li><a href="https://www.instagram.com/noxbike/" target={"blank"}><img src="./assets/images/instagram.png" alt="instagram-logo" height="40rem"/></a></li>
