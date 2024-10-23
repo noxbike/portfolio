@@ -16,8 +16,10 @@ function Navigation({setLanguage, language, dbLang}) {
                     {listNavigation.map( (item,index) => 
                         <li key={index}>
                             <Link activeClass="active" smooth spy={item.spy} to={item.link} className={item.name}>
-                                <img className="icon" width='30px' src={item.icon} alt={item.name} />
+                            <div>
+                                <img className="icon" width='25px' src={item.icon} alt={item.name} />
                                 <span className='text'>{dbLang[item.name]}</span>
+                            </div>
                             </Link>
                         </li>
                     )}
