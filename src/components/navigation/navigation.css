@@ -20,17 +20,6 @@
     justify-content: space-around;
 }
 
-.navigation .menu li a{
-    cursor: pointer;
-    color: white;
-    padding: 5px 15px;
-    margin: 0 10px;
-}
-
-.navigation .menu li a .text{
-    display: contents;
-}
-
 .navigation .menu li a .icon{
     display: none;
 }
@@ -47,7 +36,7 @@
 }
 
 @media screen and (min-width: 0px) and (max-width:747px){
-    .navigation .container .section-nav{
+   .navigation .container .section-nav{
         background-color: rgb(18, 18, 18);
         box-shadow: 0px 0 20px 0 #467c9b;
         border-radius: 15px 15px 0 0;
@@ -131,11 +120,18 @@
 }
 
 @media screen and (min-width: 748px){
-    .navigation .menu{
+   .navigation .menu{
         min-width:400px
     }
 
-    .navigation .active{
+    .navigation .menu li a .text{
+        cursor: pointer;
+        color: white;
+        padding: 5px 15px;
+        margin: 0 10px;
+    }
+ 
+    .navigation .active .text{
         background-color: #467c9b;
         color: black!important;
         box-shadow: 0px 0px 12px #467c9bd9;
@@ -143,7 +139,7 @@
         transition: 0.5s;
     }
 
-    .menu li:hover a{
+    .menu li:hover a .text{
         color: #467c9b!important;
         border: 2px solid #467c9b;
         background: none;
