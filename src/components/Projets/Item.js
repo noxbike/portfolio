@@ -8,7 +8,7 @@ export default function Item({data, language}) {
                 <p>{data.intro[language]}</p>
                 <ul className='languages'>
                     {data.languages.map((lang, index) =>
-                        <img key={index} src={`./assets/images/${lang}.png`} alt={`logo-${lang}`} height={25}/>
+                        <img loading='lazy' key={index} src={`./assets/images/${lang}.png`} alt={`logo-${lang}`} height={25}/>
                     )}
                 </ul>
                 <div className='linkButton'>
@@ -16,7 +16,7 @@ export default function Item({data, language}) {
                 </div>
             </div>
             <div className='visualisation'>
-                <img className='box1' src={`./assets/projects/${data.img}`} alt="landpage" height={200}/>
+                <img loading="lazy" className='box1' src={`./assets/projects/${data.img}`} alt="landpage" height={200}/>
             </div>
     </div>
   )

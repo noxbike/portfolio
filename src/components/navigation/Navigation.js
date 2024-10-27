@@ -17,7 +17,7 @@ function Navigation({setLanguage, language, dbLang}) {
                         <li key={index}>
                             <Link activeClass="active" smooth spy={item.spy} to={item.link} className={item.name}>
                             <div>
-                                <img className="icon" width='25px' src={item.icon} alt={item.name} />
+                                <img loading='lazy' className="icon" width='25px' src={item.icon} alt={item.name} />
                                 <span className='text'>{dbLang[item.name]}</span>
                             </div>
                             </Link>

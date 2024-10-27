@@ -14,7 +14,7 @@ function About({dbLang}) {
                     <a href="/assets/documents/CV-Morel-Mickael.pdf" target="blank">CV</a>
                 </div>
                 <div className='picture'>
-                    <img src="./assets/images/moi.png" alt="moi" />
+                    <img loading="lazy" src="./assets/images/moi.png" alt="moi" />
                 </div>
             </div>
         </div>

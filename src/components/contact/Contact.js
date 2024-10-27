@@ -110,11 +110,11 @@ function Contact({dbLang}) {
                 <p>noxbike@gmail.com</p>
                 <p>Sainte-Rose, Réunion</p>
                 <ul className="social-media">
-                    <li><a href="https://www.facebook.com/morel.mickael.169" target={"blank"}><img src="./assets/images/facebook.png" alt="facebook-logo" height="40rem"/></a></li>
-                    <li><a href="https://www.instagram.com/noxbike/" target={"blank"}><img src="./assets/images/instagram.png" alt="instagram-logo" height="40rem"/></a></li>
-                    <li><a href='https://www.linkedin.com/in/mickael-morel-134879150/' target={"blank"}><img src="./assets/images/linkedin.png" alt="linkedin-logo" height="40rem"/></a></li>
-                    <li><a href="https://twitter.com/noxbike" target="blank"><img src="./assets/images/bird.png" alt="twitter-logo" height="40rem"/></a></li>
-                    <li><a href="https://github.com/noxbike" target={"blank"}><img src="./assets/images/github2.png" alt="Github-logo" height="40rem"/></a></li>
+                    <li><a href="https://www.facebook.com/morel.mickael.169" target={"blank"}><img loading="lazy" src="./assets/images/facebook.png" alt="facebook-logo" height="40rem"/></a></li>
+                    <li><a href="https://www.instagram.com/noxbike/" target={"blank"}><img loading="lazy" src="./assets/images/instagram.png" alt="instagram-logo" height="40rem"/></a></li>
+                    <li><a href='https://www.linkedin.com/in/mickael-morel-134879150/' target={"blank"}><img loading="lazy" src="./assets/images/linkedin.png" alt="linkedin-logo" height="40rem"/></a></li>
+                    <li><a href="https://twitter.com/noxbike" target="blank"><img loading="lazy" src="./assets/images/bird.png" alt="twitter-logo" height="40rem"/></a></li>
+                    <li><a href="https://github.com/noxbike" target={"blank"}><img loading="lazy" src="./assets/images/github2.png" alt="Github-logo" height="40rem"/></a></li>
                 </ul>
             </div>
             <div className='footer'>
