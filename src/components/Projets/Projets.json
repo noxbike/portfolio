@@ -8,7 +8,7 @@
         },
         "link": "/projet1",
         "linkGit": "http://www.github.com/noxbike/RoomMe",
-        "img": "roome.JPG",
+        "img": "popcorn.png",
         "languages":["react"]
     },
     {
@@ -20,7 +20,7 @@
         },
         "link": "/projet2",
         "linkGit": "http://www.github.com/noxbike/Landing_page",
-        "img": "capture.JPG",
+        "img": "landingPage.png",
         "languages": ["html", "css"]
     },
     {
@@ -32,7 +32,7 @@
         },
         "link": "/projet3",
         "linkGit": "http://www.github.com/noxbike/formulaire",
-        "img": "formulaire.JPG",
+        "img": "formulaire.png",
         "languages": ["html", "css"]
     }
 ]
