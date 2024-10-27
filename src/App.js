@@ -6,7 +6,7 @@ import Service from './components/service/Service'
 import Contact from './components/contact/Contact';
 import DataAnalityque from './components/dataAnalityque/DataAnalityque';
 import Projet from './components/Projets/Projet';
-import dbLang from "./language_json/language.json"
+import dbLang from "./data_json/language.json"
 import { useState } from 'react';
 
 function App() {

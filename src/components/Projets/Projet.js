@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import './projet.css'
-import data from './Projets.json'
+import data from '../../data_json/Projets.json'
 import Item from './Item'
 
 export default function Projet({dbLang, language}) {
